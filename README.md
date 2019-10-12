@@ -1,5 +1,4 @@
-# React.js-estudo-pessoal
-Estudo pessoal de React.js
+# React.js Estudo Pessoal
 
 Estudo pessoal baseado no curso *Iniciando com React.js* da School of Net
 
