@@ -5,8 +5,8 @@ export default class Events2 extends Component {
     constructor(props){
         super(props);
         this.state = {
-            name: '',
-            age : 0
+            name  : '',
+            lista : []
         }
     }   
 
@@ -16,15 +16,24 @@ export default class Events2 extends Component {
         });
     }
 
+    insertToData = () => {
+        const arr = this.state.lista;
+        arr.push(this.state.name);
+        this.setState({
+            name  : '',
+            lista : arr
+        });
+        console.log(this.state);
+    }
+
     render(){
-        const {name, age} = this.state;
+        const {name, lista} = this.state;
         return(
             <div>
                 <input type="text" onChange={this.handleChange} name="name" id="id" placeholder="Enter your name"/>
-                <input type="text" onChange={this.handleChange} name="age"  id="age" placeholder="Enter your age"/>
-                <button type="button">OK</button>
-                <p>Nome: {name}</p>
-                <p>Idade: {age}</p>
+                <button type="button" onClick={this.insertToData}>OK</button>
+                <p>Nome : {name}</p>
+                {/* <p>Lista: {lista}</p> */}
             </div>
         );
     }
