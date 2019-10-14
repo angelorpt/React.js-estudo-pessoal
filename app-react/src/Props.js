@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { directive } from '@babel/types';
+import Panel from './Panel';
 
 class Props extends Component {
 
@@ -32,9 +32,12 @@ class Props extends Component {
                         <td>{attr3}</td>
                     </tr>
                 </table>
+                <Panel bordercolor="blue" headercolor="red" headertext="This is a header" data="School of Net" />
+                <Panel bordercolor="gray" headercolor="purple" headertext="This is a header" data="School of Net" />
             </div>
         );
     }
-}
+
+} // [END CLASS]
 
 export default Props;
