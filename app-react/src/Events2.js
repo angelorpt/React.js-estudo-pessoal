@@ -33,7 +33,15 @@ export default class Events2 extends Component {
                 <input type="text" onChange={this.handleChange} name="name" id="id" placeholder="Enter your name"/>
                 <button type="button" onClick={this.insertToData}>OK</button>
                 <p>Nome : {name}</p>
-                {/* <p>Lista: {lista}</p> */}
+                <ul>
+                    { 
+                        lista.map(item => {
+                            return (
+                                <li key={item}>{item}</li>
+                            );
+                        })
+                    }
+                </ul>
             </div>
         );
     }
