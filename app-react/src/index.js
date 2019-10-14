@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import Hello from './Hello';
 import Clock from './Clock';
+import Props from './Props';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Clock />, document.getElementById('root'));
+ReactDOM.render(<Props attr="a" attr2="b" attr3="c" />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
